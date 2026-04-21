@@ -1,0 +1,280 @@
+:root {
+  --bg: #f4efe6;
+  --surface: #fffdf8;
+  --surface-strong: #fff7eb;
+  --text: #1f1b16;
+  --muted: #655a4d;
+  --line: #d8c7ae;
+  --accent: #9d3c1f;
+  --accent-dark: #742b14;
+  --shadow: 0 20px 40px rgba(62, 35, 18, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 999px;
+  --content-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(157, 60, 31, 0.14), transparent 32%),
+    linear-gradient(180deg, #f8f1e8 0%, #f4efe6 40%, #efe7db 100%);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  padding: 72px 24px 48px;
+}
+
+.hero__inner,
+.section {
+  width: min(calc(100% - 32px), var(--content-width));
+  margin: 0 auto;
+}
+
+.hero__inner {
+  padding: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 36px;
+  background:
+    linear-gradient(135deg, rgba(255, 251, 244, 0.95), rgba(249, 238, 220, 0.9)),
+    #fff;
+  box-shadow: var(--shadow);
+}
+
+.hero__logo {
+  display: block;
+  width: min(100%, 620px);
+  height: auto;
+  margin: 0 0 28px;
+  object-fit: contain;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  max-width: 10ch;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.hero__lead,
+.section__note,
+.card p,
+.panel p,
+.download-card p,
+.contact-box p,
+li {
+  color: var(--muted);
+}
+
+.hero__lead {
+  max-width: none;
+  width: 100%;
+  margin: 20px 0 0;
+  font-size: 1.05rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  color: #fff8f2;
+  background: linear-gradient(135deg, var(--accent), #b8572d);
+}
+
+.button--ghost {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.section {
+  padding: 28px 0 56px;
+}
+
+.section--accent {
+  padding-top: 40px;
+}
+
+.section--compact {
+  padding-bottom: 80px;
+}
+
+.section__heading {
+  margin-bottom: 24px;
+}
+
+.section__heading--downloads-gap {
+  margin-top: 44px;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid--cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid--downloads {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card,
+.panel,
+.download-card,
+.contact-box {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.card,
+.panel,
+.download-card {
+  padding: 24px;
+}
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.download-card h3 {
+  margin-bottom: 20px;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  background: var(--surface-strong);
+}
+
+.plain-list,
+.step-list {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.filetype {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(157, 60, 31, 0.12);
+  color: var(--accent-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.download-card .button {
+  width: 100%;
+  margin-top: auto;
+}
+
+.contact-box {
+  padding: 28px;
+  background: linear-gradient(135deg, rgba(255, 252, 247, 0.95), rgba(248, 237, 220, 0.96));
+}
+
+.contact-box p {
+  margin: 0 0 0.3rem;
+  line-height: 1.35;
+}
+
+.contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .grid--cards,
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 24px 16px 32px;
+  }
+
+  .hero__inner,
+  .section {
+    width: min(calc(100% - 20px), var(--content-width));
+  }
+
+  .hero__inner {
+    padding: 30px 22px;
+    border-radius: 28px;
+  }
+
+  .section {
+    padding: 18px 0 42px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
