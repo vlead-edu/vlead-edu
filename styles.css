@@ -36,6 +36,10 @@ a {
   color: inherit;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hero {
   padding: 72px 24px 48px;
 }
