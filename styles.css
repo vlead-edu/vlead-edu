@@ -146,17 +146,6 @@ li {
   background: rgba(255, 255, 255, 0.55);
 }
 
-.button--disabled {
-  color: var(--muted);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.62);
-  cursor: not-allowed;
-}
-
-.button--disabled:hover {
-  transform: none;
-}
-
 .section {
   padding: 28px 0 56px;
 }
